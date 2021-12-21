@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Alert } from 'react-na
 import Icon from 'react-native-vector-icons/Feather'
 
 import foto from './assets/abraao.jpeg'
-
+import Card from "./components/Card";
 
 
 const App = () => {
@@ -49,38 +49,16 @@ const App = () => {
         </View>
       </View>
 
-      <View style={style.card_conteiner}>
-        
-        <View style={style.card}>
-          <View style={style.card_header}>
-            <Text style={style.car_text}>Experiencia Profissional</Text>
-
-          </View>
-          <View style={style.card_content}>
-            <Text style={style.card_content_text}>EasyApp Solutions</Text>
-            <Text style={style.card_content_text}>Suporte Técnico</Text>
-            <Text style={style.card_content_text}>Desenvolvimento Mobile</Text>
-            <Text style={style.card_content_text}>17/10 até Atualmente</Text>
-          </View>
-        </View>
-
-      </View>
-
-      <View style={style.card_conteiner}>
-        
-        <View style={style.card}>
-          <View style={style.card_header}>
-            <Text style={style.car_text}>Formação Acadêmica</Text>
-
-          </View>
-          <View style={style.card_content}>
-            <Text style={style.card_content_text}>Análise e Desen. de Sistemas</Text>
-            <Text style={style.card_content_text}>Estácio de Sá</Text>
-            <Text style={style.card_content_text}>4° semestre</Text>
-          </View>
-        </View>
-
-      </View>
+        <Card titulo="Formação Academica">
+          <Text style={style.card_content_text}>Análise e Desen. de Sistemas</Text>
+          <Text style={style.card_content_text}>Estácio de Sá</Text>
+          <Text style={style.card_content_text}>4° semestre</Text>
+        </Card>
+        <Card titulo="Experiência Profissional">
+          <Text style={style.card_content_text}>EasyApp</Text>
+          <Text style={style.card_content_text}>Suporte Técnico</Text>
+          <Text style={style.card_content_text}>Atualmente trabalhando</Text>
+        </Card>
 
     </View>
     </>
@@ -118,27 +96,6 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
     width: '50%',
     marginTop: 20,
-  },
-  card_conteiner: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  car_text:{
-    color: '#1A1F16',
-    fontWeight: 'bold',
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#71ACD6', 
-    padding: 10,
-    backgroundColor: '#fff',
-  },
-  card_content: {
-    marginTop: 15,
   },
   card_content_text: {
     color: '#939393',
